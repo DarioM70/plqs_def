@@ -1,0 +1,142 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block content %}
+<body oncopy="return false">
+    <header>
+
+
+        <div class="header">
+
+            <div class="contenedor">
+                <section class="contenido-header">
+                    <section class="textos-header">
+                        <h1>Servicios Integrales</h1>
+                        <p>Somos una empresa de servicios integrales encargada de facilitar <br>
+                            lazos entre trabajador-cliente para cualquier tipo de servicio domestico o necesidad cotidiana: 
+                            
+                            
+                            <br> - Carpinteria. <br>
+                            - Arte. <br>
+                            - Educación. <br>
+                            - Electridad. <br>
+                            - Servicios a domicilio. <br>
+                            - Etc. 
+                                
+                                
+                                       
+                            
+                        </p>
+                        
+                        <a href="#">Contrata</a>
+                    </section>
+                    <img src="{% static 'app/img/marca_empresa.svg' %}" alt="">
+                </section>
+            </div>
+
+        </div>
+        
+    </header>
+
+
+    <section class="empleados-destacados">
+        <div class="contenedor1">
+            <h2 class="titulo">Trabajadores más destacados</h2>
+            <div class="contenedor-articulo">
+                <div class="articulo" data-aos="zoom-in-right">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Tragbajador 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
+                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
+                    <a href="#">Read more ---></a>
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <i class="fas fa-code"></i>
+                    <h3>Trabajador 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
+                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
+                    <a href="#">Read more ---></a>
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <i class="fas fa-cog"></i>
+                    <h3>Trabajador 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
+                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
+                    <a href="#">Read more ---></a>
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Trabajador 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
+                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
+                    <a href="#">Read more ---></a>
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <i class="fas fa-comments"></i>
+                    <h3>Trabajador 5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
+                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
+                    <a href="#">Read more ---></a>
+                </div>
+                <div class="articulo" data-aos="zoom-in-right">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Trabajador 6</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
+                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
+                    <a href="#">Read more ---></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions contenedor">
+        <section class="textos-questions">
+            <h1>Aplica para comenzar a trabajar ya.</h1>
+            <p>Inscribe tus datos personales, documentacion y anexa tu hoja de vida <br> o experiencia laboral, destreza,
+                y servicio que deseas brindar
+            </p>
+            <a href="#">Postularse</a>
+        </section>
+        <img src="{% static 'app/img/acompañanos.svg' %}" alt="" data-aos="zoom-out-up" data-aos-duration="2000">
+    </section>
+
+    <section class="estadisticas">
+        <div class="contenedor1 conten-estadisticas">
+            <section class="numbers">
+                <div class="number" data-aos="zoom-in-left">
+                    <h4>74%.</h4>
+                    <p>Aproximadamente, es el promedio de la tasa de desempleo en Tumaco a mediados de 2021.</p>
+                </div>
+                <div class="number" data-aos="zoom-in-left">
+                    <h4>53,7%</h4>
+                    <p>Aproximadamente, es el promedio del indice de pobreza en Tumaco a mediados de 2021.</p>
+                </div>
+                <div class="number" data-aos="zoom-in-left">
+                    <h4>88%</h4>
+                    <p>Aproximadamente son personas desocupadas en Tumaco.</p>
+                </div>
+                <div class="number" data-aos="zoom-in-left">
+                    <h4>11,33%</h4>
+                    <p>Aproximadamente es el porcentaje de la tasa de desempleo del total nacional.</p>
+                </div>
+            </section>
+            <section class="Texto-estadisticas">
+                <h4>Proposito colectivo</h4>
+                <p>Con esta empresa se plantea, ademas de brindar ayuda con diversos servicios, <b>aminorar</b> el indice de desempleo y pobreza en Tumaco, y posteriormente, 
+                    en otras localidades. Dandoles así, trabajo a muchas personas que lo necesitan y que tienen un gran 
+                    potencial que no es aprovechado. 
+                </p>
+                <a href="https://www.youtube.com/">Trabaja ya</a>
+            </section>
+        </div>
+    </section>
+
+    <section class="contenedor1 services">
+        <img src="{% static 'app/img/terceraIlustracion.svg' %}" alt="">
+        <div class="box-skills">
+            <h4><i class="far fa-check-circle"></i> Eficacia</h4>
+            <h4><i class="far fa-check-circle"></i> Seguridad</h4>
+            <h4><i class="far fa-check-circle"></i> Rapidez</h4>
+            <h4><i class="far fa-check-circle"></i> Estabilidad</h4>
+            <h4><i class="far fa-check-circle"></i> Soporte</h4>
+        </div>
+    </section>
+{% endblock %}

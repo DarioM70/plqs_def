@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pa' las que sea</title>
+    <link rel="icon" type="icon/ico" href="{% static 'app/img/icodef.png'%}">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body oncopy="return false">
+    <header>
+
+        <!-- Barra navegacion-->
+        <nav>
+            <section class="contenedor-menu nav">
+                <div class="logo">
+                    <a href="/inicio">
+                        <img src="{% static 'app/img/marca_empresa.svg'%}" alt="index">
+                    </a>
+                    
+                    
+                </div>
+                <div class="enlaces-header">
+                    <a href="/inicio">Inicio</a>
+                    <a href="/servicios">Servicios</a>
+                    <a href="/contacto">Contacto</a>
+                    <a href="/registro">Registrarse</a>
+                       <a style="color: #1fde82;" href="/iniciar ">Iniciar sesion</a>
+                </div>
+                <div class="hamburguer">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </section>
+        </nav>
+
+    </header>
+    <!-- contenido cambiante -->
+    {% block content %}
+
+
+    {% endblock %}
+
+    <footer>
+        <div class="partFooter">
+            <h3>©</h3>
+            <img src="{% static 'app/img/marca_empresa.svg' %}" alt="">
+        </div>
+        <div class="partFooter">
+            <h4>Servicios</h4>
+            <a href="#">Domicilios</a>
+            <a href="#">Trabajos domesticos</a>
+            <a href="#">Mecanico</a>
+        </div>
+        <div class="partFooter">
+            <h4>Acerca de</h4>
+            <a href="#">1201dario.m70@gmail.com</a>
+            <a href="#">plqs.solutions@gmail.com</a>
+            <a href="#">31637702183</a>
+        </div>
+        <div class="partFooter">
+            <h4>Redes sociales</h4>
+            <div class="social-media">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/c15b744a04.js" crossorigin="anonymous"></script>
+    <script src="{% static 'app/js/main.js'%}"></script>
+</body>
+
+</html>
