@@ -139,7 +139,18 @@ nav {
     text-decoration: none;
     margin-left: 20px;
     margin-right: 30px;
+
 }
+
+.enlaces-header a:hover{
+    background-color: rgba(31, 222, 130, 0.15);
+
+}
+
+.active{
+    background-color: rgba(31, 222, 130, 0.3);
+}
+
 
 .hamburguer {
     width: 80px;
@@ -507,7 +518,7 @@ footer {
 
     .contenido-header a {
         margin: 390px 0 0 0;
-        
+
     }
 
     .nav {

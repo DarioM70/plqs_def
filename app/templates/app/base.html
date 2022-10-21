@@ -28,11 +28,11 @@
                     
                 </div>
                 <div class="enlaces-header">
-                    <a href="/inicio">Inicio</a>
-                    <a href="/servicios">Servicios</a>
-                    <a href="/contacto">Contacto</a>
-                    <a href="/registro">Registrarse</a>
-                       <a style="color: #1fde82;" href="/iniciar ">Iniciar sesion</a>
+                    <a class="{% if request.path == '/inicio/' %}active{% endif %}" href="/inicio">Inicio</a>
+                    <a class="{% if request.path == '/servicios/' %}active{% endif %}" href="/servicios">Servicios</a>
+                    <a class="{% if request.path == '/contacto/' %}active{% endif %}" href="/contacto">Contacto</a>
+                    <a class="{% if request.path == '/registro/' %}active{% endif %}" href="/registro">Registrarse</a>
+                       <a class="{% if request.path == '/iniciar/' %}active{% endif %}" style="color: #1fde82;" href="/iniciar ">Iniciar sesion</a>
                 </div>
                 <div class="hamburguer">
                     <i class="fas fa-bars"></i>
