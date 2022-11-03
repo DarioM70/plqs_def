@@ -1,6 +1,41 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
+<head>
+    <title>Iniciar sesion</title>
+    <link rel="stylesheet" href="{% static 'app/css/iniciar.css'%}">
+    
+</head>
 
+
+
+<body>
+    <section class="log contenedor">
+        <section class="texto-log">
+            <h1>Registrate, inicia sesion o postulate.</h1>
+            <p>para comenzar a ser parte de la comunidad de Pa' Las Que Sea Solutions©</p>
+            <a href="#">Registrate</a>
+        </section>
+
+        <section class="caja-form">
+            
+            <div class="form">
+                <h2>Login</h2>
+
+                <form class="formulario" action="">
+                    
+                    <input placeholder="Correo" name="Correo" type="text">
+
+
+                    <input name="contraseña" type="text" placeholder="Contraseña">
+
+
+
+                </form>
+            </div>
+        </section>
+        
+    </section>
+</body>
 
 {% endblock %}
