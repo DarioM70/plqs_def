@@ -8,7 +8,7 @@ class Solicitudes(models.Model):
 class Asignación(models.Model):
     pass
 
-class Estadp(models.Model):
+class Estado(models.Model):
     pass
 
 class reseña(models.Model):

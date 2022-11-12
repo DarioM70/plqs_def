@@ -2,7 +2,53 @@
 {% load static %}
 {% block content %}
 
+<head>
+    <title>Servicios</title>
+    <link rel="stylesheet" href="{% static 'app/css/servicios.css'  %}">
+    
+</head>
 
+<body>
+    
+    <section class="caja-servicios">
+        <div class="contenedor1">
+
+            <h2 class="descripcion titulo">Servicios disponibles</h2>
+
+            <div class="contenedor-servicios">
+                {% for serv in servicios %}
+
+                <div class="flex">
+
+
+                    
+                    <div class="servicio" data-aos="zoom-in-right">
+
+                        
+                        <div class="ico-serv"><i class=" fas fa-pen-fancy"></i></div>
+                        <h1>{{serv.titulo}}</h1>
+                        
+                        <a href="" class="display"><i class=" fa-solid fa-chevron-down"></i></a>
+                        
+                    </div>
+    
+                    <div class="descripcion" data-aos="zoom-in-right">
+                        <h2>Descripción</h2>
+                        <p>
+                            {{serv.descripcion}}
+    
+                        </p>
+                    </div>
+
+                </div>
+
+                {% endfor %}  
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/9e2a7dfdb0.js" crossorigin="anonymous"></script>
+</body>
 
 {% endblock %}
 

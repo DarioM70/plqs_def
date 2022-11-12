@@ -200,15 +200,21 @@ nav {
 .textos-header {
     margin: 100px 0 0 30px;
     z-index: 1;
+    background-color: #0000009a;
+    padding: 30px;
+    border-radius: 20px;
 }
 
+.contenido-header h1{
+    color: #f2f2f2;
+}
 
 .contenido-header p {
     height: 1px;
     font-size:25px;
     font-weight: 300;
     margin-top: 14px;
-    color: #000000;
+    color: #ffffff;
     
 }
 
@@ -228,6 +234,7 @@ nav {
     font-size: 20px;
     border-radius: 5px;
     box-shadow: 0 8px 32px rgba(31, 222, 130, .46);
+    transition: background .5s ;
     
 }
 
@@ -236,6 +243,14 @@ nav {
 .titulo {
     font-size: 50px;
 }
+
+.btn-header:hover{
+    background: #00a354;
+    
+}
+
+
+
 
 /* About us */
 

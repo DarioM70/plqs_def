@@ -3,7 +3,7 @@
 {% block content %}
 <head>
     <title>Iniciar sesion</title>
-    <link rel="stylesheet" href="{% static 'app/css/iniciar.css'%}">
+    <link rel="stylesheet" href="{% static 'app/css/iniciar.css'  %}">
     
 </head>
 
@@ -24,10 +24,33 @@
 
                 <form class="formulario" action="">
                     
-                    <input placeholder="Correo" name="Correo" type="text">
+                    <input class="input-login" placeholder="Correo" name="Correo" type="email">
 
 
-                    <input name="contraseña" type="text" placeholder="Contraseña">
+                    <input class="input-login" name="contraseña" type="password" placeholder="Contraseña">
+
+                    <div class="datos-config">
+                        <input type="checkbox" id="switch" class="lbl-switch">
+                        <h5><label class="record" for="switch">Recordarme</label></h5> 
+                        <h5> <a href="">¿Olvidó su contraseña?</a> </h5>
+
+                    </div>
+
+                    <div class="boton">
+                        <input class="entrar" type="submit" placeholder="Entrar" value="Entrar ">
+                    </div>
+
+                    <div class="login-social">
+                        <h3> Iniciar sesion con </h3>
+                        <div class="ico-social">
+                            
+                                <i class="face fab fa-facebook-f"></i>
+                                <i class="twitter fab fa-twitter"></i>
+                                <i class="ig fab fa-instagram"></i>
+                                <i class="google fab fa-google"></i>
+                        </div>
+                    </div>
+                    
 
 
 
