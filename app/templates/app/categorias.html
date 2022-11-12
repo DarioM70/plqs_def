@@ -1,0 +1,49 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>Categorias</title>
+    <link rel="stylesheet" href="{% static 'app/css/categorias.css'  %}">
+    
+</head>
+
+<body>
+    
+    <section class="caja-servicios">
+        <div class="contenedor1">
+
+            <h2 class="descripcion titulo">Categorias</h2>
+
+            <div class="contenedor-servicios">
+                {% for cat in categorias %}
+
+                <div class="flex">
+
+
+                    
+                    <div class="servicio" data-aos="zoom-in-right">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h1>{{cat.titulo}}</h1>
+                    </div>
+    
+                    <div class="descripcion" data-aos="zoom-in-right">
+                        <h2>Descripción</h2>
+                        <p>
+                            {{cat.descripcion}}
+    
+                        </p>
+                    </div>
+
+                </div>
+
+                {% endfor %}  
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+
+{% endblock %}
