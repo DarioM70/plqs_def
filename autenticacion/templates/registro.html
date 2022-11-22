@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 <head>
-    <title>Iniciar sesion</title>
-    <link rel="stylesheet" href="{% static 'app/css/iniciar.css'  %}">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'app/css/registro.css' %}">
     
 </head>
 
@@ -14,7 +14,7 @@
         <section class="texto-log">
             <h1>Registrate, inicia sesion o postulate.</h1>
             <p>para comenzar a ser parte de la comunidad de Pa' Las Que Sea Solutions©</p>
-            <a href="/registro/">Registrate</a>
+            <a href="/iniciar/">Tengo cuenta</a>
         </section>
 
         <section class="caja-form">
@@ -22,22 +22,23 @@
             <div class="form">
                 <h2>Login</h2>
 
-                <form class="formulario" action="">
+                
+                <form class="formulario" action="." method="post">
+
+                    {% csrf_token %}
+
+                    {{form.username}}
+                   
+                    {{form.email}}
+
+                    {{form.password1}}
                     
-                    <input class="input-login" placeholder="Correo" name="Correo" type="email">
+                    {{form.password2}}
 
-
-                    <input class="input-login" name="contraseña" type="password" placeholder="Contraseña">
-
-                    <div class="datos-config">
-                        <input type="checkbox" id="switch" class="lbl-switch">
-                        <h5><label class="record" for="switch">Recordarme</label></h5> 
-                        <h5> <a href="">¿Olvidó su contraseña?</a> </h5>
-
-                    </div>
+                    
 
                     <div class="boton">
-                        <input class="entrar" type="submit" placeholder="Entrar" value="Entrar ">
+                        <input class="entrar" type="submit" value="Registrate">
                     </div>
 
                     <div class="login-social">

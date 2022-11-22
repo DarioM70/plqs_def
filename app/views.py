@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 from servicios.models import Servicios, Categoria
 
@@ -22,10 +22,6 @@ def servicios(request):  # vista servicio para url
 
 def contacto(request):  # vista contacto para url
     return render(request, "app/contacto.html")
-
-
-def registrarse(request):  # vista registro para url
-    return render(request, "app/registro.html")
 
 
 def iniciar(request):  # vista inicio de sesion para url

@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <title>Registro exitoso!</title>
+    <link rel="stylesheet" href="{% static 'app/css/login_redirect.css'  %}">
+    
+</head>
+
+    <body>
+        <div>
+            <h2>¡El usuario fué creado con exito!</h2>
+            <p>
+                Gracias por elegirnos. Ya puedes cerrar esta pestaña y regresarte a la pagina inicio
+                para empezar tu aventura.
+            </p>
+        </div>
+    </body>
+   
+
+{% endblock %}
