@@ -1,41 +1,34 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.views.generic import View
 from .forms import SignUpForm
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.contrib.auth import login, authenticate
 
 
 
 
 # Create your views here.
+def inicio(request):  # vista inicio para url
+    return render(request, "app/index.html")
 
-def redirect(request): # vista redirect para urls
-    return render(request, 'login_redirect.html')
+def register(request): # vista login para url
 
-class LoginView(View):
-    def get(self, request):
-        form = SignUpForm()
-        return render(request, 'registro.html', {'form': form})
+    data = {'form': SignUpForm}
+    if request.method == 'POST':
+        formulario = SignUpForm(data = request.POST)
+        if formulario.is_valid():
+            formulario.save()
 
-    def post(self, request):
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            usuario = form.save()
+
+            usuario = authenticate(username = formulario.cleaned_data['username'],
+                                   password = formulario.cleaned_data['password1'])
 
             login(request, usuario)
-
-            return redirect('redirect')
+            return redirect('Inicio')
 
         else:
-            return HttpResponse('hola')
-    
-    
+            messages.error(request,'No se pudieron validar los datos. intentalo de nuevo')
 
+        data['form'] = formulario
 
-
-
-
-
-
-
-
+    return render(request, 'registro.html', data)

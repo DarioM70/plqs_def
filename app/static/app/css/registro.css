@@ -54,7 +54,7 @@ h1 {
 /*Caja interna del formulario*/
 .form {
     width: 375px;
-    height: 475px;
+    height: 550px;
     background: #1fde82a2;
     color: rgb(56, 56, 56);
     border-radius: 10px;
@@ -294,7 +294,7 @@ input[type="checkbox"]{
 
 @media screen and (max-width:885px) {
     .form {
-        width: 300px;
+        width: 350px;
      
      
     }
@@ -308,6 +308,10 @@ input[type="checkbox"]{
         height: 100%;
     }
 
+    .caja-form{
+        width: 85%;
+
+    }
 
     .texto-log{
         width: 80%;
@@ -316,7 +320,17 @@ input[type="checkbox"]{
 
     .form{
         margin-top: 50px;
-        width: 330px;
+        width: 370px;
     }
 }
 
+@media screen and (max-width:580px) {
+ 
+
+    
+    .form{
+        padding: 30px;
+        margin-top: 50px;
+        width: 470px;
+    }
+}

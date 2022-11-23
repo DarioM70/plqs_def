@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Class registro
 class SignUpForm(UserCreationForm):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({
@@ -39,10 +38,26 @@ class SignUpForm(UserCreationForm):
             'required': "True"
         })
 
+        self.fields['first_name'].widget.attrs.update({
+            'class': "input-login",
+            'placeholder': "Nombre(s)*",
+            'name': "first_name",
+            'type': "text",
+            'required': "True"
+        })
+
+        self.fields['last_name'].widget.attrs.update({
+            'class': "input-login",
+            'placeholder': "Apellido*",
+            'name': "last_name",
+            'type': "text",
+            'required': "True"
+        })
+
 
 
 
     """ Formulário para inicializació de usuário """
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
