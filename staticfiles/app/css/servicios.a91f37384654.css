@@ -1,0 +1,164 @@
+/*Caja servicios*/
+.caja-servicios{
+    background: #f2f2f2;
+}
+
+.contenedor-servicios {
+    display: inline-block;
+    flex-direction: column;
+    margin-top: 60px;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.servicio {
+    width: 70%;
+    background: #fff;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.servicio:hover {
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+    background: #1fde8246;
+    cursor: pointer;
+    
+}
+
+.ico-serv {
+    font-size: 30px;
+    color: #fff;
+    background: #1FDE82;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(31, 222, 130, .46);
+    margin-right: 10px;
+    
+}
+
+
+
+.servicio>h1 {
+    display: block;
+    margin-left: 10px;
+    padding-left: 5px;
+    text-transform: capitalize;
+    
+}
+
+.display{ 
+    display: none;
+    
+}
+
+.descripcion2{
+    padding: 0 0 15px 20px;
+    width: 50%;
+    margin: 20px 0 60px 20px;
+    display: none;
+}
+
+.descripcion2 p{
+    font-size: 18px;
+}
+
+.display:hover{
+    height: 200px;
+}
+
+.display:hover ~ .descripcion2{
+   display: block;
+
+}
+
+.servicio>p {
+    font-weight: 100;
+    color: #5D6678;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    
+}
+
+.servicio>a {
+    color: #5D6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.servicio>a:hover {
+    color: #1FDE82;
+    transition: color .5s;
+}
+
+.descripcion{
+    padding: 0 0 15px 20px;
+    width: 30%;
+    margin: 20px 0 60px 20px;
+    
+    border-left: 1px solid black;
+    
+    
+}
+
+.descripcion p{
+    font-size: 18px;
+}
+
+.flex{
+    display: flex;
+}
+
+@media screen and (max-width:1120px) {
+   
+    .descripcion{
+        display: none;
+        
+    }
+
+    .servicio{
+        width: 100%;
+        display: flex;
+    }
+
+    .servicio>h1 {
+        display: block;
+        width: 50%;
+        margin-left: 10px;
+        padding-left: 5px;
+        text-transform: capitalize;
+        
+    }
+
+    .display{
+        display: block;
+        padding-left: 30%;
+        font-size: 30px;
+    }
+
+
+
+}    
+
+@media screen and (max-width:885px) {
+
+
+
+}
+@media screen and (max-width:590px) {
+    .ico-serv{
+        display: none;
+    }
+    
+}
