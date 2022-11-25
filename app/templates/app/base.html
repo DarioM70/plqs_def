@@ -31,7 +31,7 @@
                     <a class="{% if request.path == '/servicios/' %}active{% endif %}" href="/servicios">Servicios</a>
                     <a class="{% if request.path == '/contacto/' %}active{% endif %}" href="/contacto">Contacto</a>
                     <a class="{% if request.path == '/registro/' %}active{% endif %}" href="/registro">Registrarse</a>
-                       <a class="{% if request.path == '/iniciar/' %}active{% endif %}" style="color: #1fde82;" href="/iniciar ">Iniciar sesion</a>
+                    <a class="caja-ini {% if request.path == '/iniciar/' %}caja-active{% endif %}" href="/iniciar ">Iniciar sesion</a>
                 </div>
                 <div class="hamburguer">
                     <i class="fas fa-bars"></i>
@@ -53,29 +53,71 @@
         </div>
         <div class="partFooter">
             <h4>Servicios</h4>
-            <a href="#">Domicilios</a>
-            <a href="#">Trabajos domesticos</a>
-            <a href="#">Mecanico</a>
+            <a href="/servicios">Domicilios</a>
+            <a href="/servicios">Trabajos domesticos</a>
+            <a href="/servicios">Mecanico</a>
         </div>
         <div class="partFooter">
             <h4>Acerca de</h4>
-            <a href="#">1201dario.m70@gmail.com</a>
-            <a href="#">plqs.solutions@gmail.com</a>
-            <a href="#">31637702183</a>
+            <a href="maito:1201dario.m70@gmail.com">1201dario.m70@gmail.com</a>
+            <a href="mailto:plqs.solutions@gmail.com">plqs.solutions@gmail.com</a>
+            <a href="tel:31637702183">31637702183</a>
         </div>
         <div class="partFooter">
             <h4>Redes sociales</h4>
             <div class="social-media">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100028151536194"><i class="hover-btn fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://twitter.com/dario_marquinez"><i class="hover-btn fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/dario_m70/"><i class="hover-btn fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCWyf-vnlONAAJERL_fqKtjg"><i class="hover-btn fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/c15b744a04.js" crossorigin="anonymous"></script>
     <script src="{% static 'app/js/main.js'%}"></script>
+    <script src="https://kit.fontawesome.com/9e2a7dfdb0.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseApp = firebase.initializeApp({ 
+            apiKey: "AIzaSyCE43SP46T4kg876m9H6-Oafcx_Qou-eQ0",
+            authDomain: "plqssolutions-ba39c.firebaseapp.com",
+            projectId: "plqssolutions-ba39c",
+            storageBucket: "plqssolutions-ba39c.appspot.com",
+            messagingSenderId: "665236421959",
+            appId: "1:665236421959:web:9b31e6a5e34b5b6e012062",
+            measurementId: "G-DP2XDS30EC"
+         });
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+
+        function loginGoogle(){
+            var provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth()
+            .signInWithPopup(provider)
+            .then((result) => {
+            /** @type {firebase.auth.OAuthCredential} */
+            var credential = result.credential;
+
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+            }).catch((error) => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+            });
+        }
+     </script>
 </body>
 
 </html>

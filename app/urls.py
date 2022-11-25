@@ -11,7 +11,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('inicio/', views.inicio, name="Inicio"),
     path('servicios/', views.servicios, name="Servicios"),
-    path('categorias/', views.categorias, name="Categorias"),
+
     path('contacto/', views.contacto, name="Contacto"),
     path('iniciar/', views.iniciar, name="Iniciar sesion"),
 

@@ -4,6 +4,7 @@
 <head>
     
     <title>Pa' las que sea</title>
+    <link rel="stylesheet" href="{% static 'app/css/servicios.css'  %}">
     
 </head>
 
@@ -33,7 +34,7 @@
                             
                         </p>
                         
-                        <a class="btn-header" href="/servicios/">Contrata</a>
+                        <a class="btn-header active-btn" href="/servicios/">Contrata</a>
                     </section>
                     <img src="{% static 'app/img/marca_empresa.svg' %}" alt="">
                 </section>
@@ -48,48 +49,29 @@
         <div class="contenedor1">
             <h2 class="titulo">Funcionarios más destacados</h2>
             <div class="contenedor-articulo">
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="fas fa-pen-fancy"></i>
-                    <h3>Trabajador 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
-                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
-                    <a href="#">Read more ---></a>
+                {% for colab in colaboradores %}
+                <div class="flex">
+                    <div class="articulo" data-aos="zoom-in-right">
+                        <img src="" alt="">
+                        <h3>{{colab.primerNombre}}</h3>
+    
+                        <p>{{colab.descripcion}}</p>
+                        <div class="caja-read"><a href="">Read more ---></a></div>
+                        <div>
+                            <h2>5k calificaciones</h2>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </div>
+                        
+
+                    </div>
                 </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="fas fa-code"></i>
-                    <h3>Trabajador 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
-                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
-                    <a href="#">Read more ---></a>
-                </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="fas fa-cog"></i>
-                    <h3>Trabajador 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
-                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
-                    <a href="#">Read more ---></a>
-                </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>Trabajador 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
-                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
-                    <a href="#">Read more ---></a>
-                </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="fas fa-comments"></i>
-                    <h3>Trabajador 5</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
-                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
-                    <a href="#">Read more ---></a>
-                </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Trabajador 6</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maxime eius quo
-                        consequuntur magni. Quis voluptate repudiandae soluta quod mollitia!</p>
-                    <a href="#">Read more ---></a>
-                </div>
+                
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -99,7 +81,7 @@
             <p>Inscribe tus datos personales, documentacion y anexa tu hoja de vida <br> o experiencia laboral, destreza,
                 y servicio que deseas brindar
             </p>
-            <a href="/iniciar">Postularse</a>
+            <a class="active-btn" href="/iniciar">Postularse</a>
         </section>
         <img src="{% static 'app/img/acompañanos.svg' %}" alt="" data-aos="zoom-out-up" data-aos-duration="2000">
     </section>
@@ -130,19 +112,24 @@
                     en otras localidades. Dandoles así, trabajo a muchas personas que lo necesitan y que tienen un gran 
                     potencial que no es aprovechado. 
                 </p>
-                <a href="/iniciar/">Trabaja ya</a>
+                <a class="active-btn" href="/iniciar/" >Trabaja ya</a>
             </section>
         </div>
     </section>
 
     <section class="contenedor1 services">
-        <img src="{% static 'app/img/terceraIlustracion.svg' %}" alt="">
+        <div class="imagenes-services">
+            <img class="img-serv" src="{% static 'app/img/tec-seguridad.jpg' %}" alt="">
+            <img class="img-serv" src="{% static 'app/img/contrato.jpg' %}" alt="">
+            <img class="img-serv" src="{% static 'app/img/Deliveries.jpg' %}" alt="">
+        </div>
+        
         <div class="box-skills">
-            <h4><i class="far fa-check-circle"></i> Eficacia</h4>
-            <h4><i class="far fa-check-circle"></i> Seguridad</h4>
-            <h4><i class="far fa-check-circle"></i> Rapidez</h4>
-            <h4><i class="far fa-check-circle"></i> Estabilidad</h4>
-            <h4><i class="far fa-check-circle"></i> Soporte</h4>
+            <h4><i class="fa-solid fa-truck-fast"></i> Eficacia</h4>
+            <h4><i class="fa-solid fa-shield-halved"></i> Seguridad</h4>
+            <h4><i class="fa-solid fa-gauge-high"></i> Rapidez</h4>
+            <h4><i class="fa-solid fa-fill-drip"></i> Estabilidad</h4>
+            <h4><i class="fa-solid fa-circle-info"></i> Soporte</h4>
         </div>
     </section>
 {% endblock %}

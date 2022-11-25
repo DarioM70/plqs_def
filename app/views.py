@@ -1,17 +1,14 @@
 from django.shortcuts import render
 
-from servicios.models import Servicios, Categoria
+from servicios.models import Servicios
+from .models import Colaboradores
 
 
 # Create your views here.
 
 def inicio(request):  # vista inicio para url
-    return render(request, "app/index.html")
-
-
-def categorias(request):  # vista categorias para url
-    categorias = Categoria.objects.all()
-    return request(request, "app/categorias.html")
+    colaboradores = Colaboradores.objects.all()
+    return render(request, "app/index.html", {"colaboradores": colaboradores})
 
 
 def servicios(request):  # vista servicio para url

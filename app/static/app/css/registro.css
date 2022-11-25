@@ -55,8 +55,9 @@ h1 {
 .form {
     width: 375px;
     height: 550px;
-    background: #1fde82a2;
+    background: #ffffffa2;
     color: rgb(56, 56, 56);
+    border: 1px dotted black;
     border-radius: 10px;
     padding: 40px 50px 20px 50px;
     margin-bottom: 40px;
@@ -79,7 +80,9 @@ h1 {
     margin: 15px 0 0;
     padding: 7PX;
     border: none;
-    border-radius: 10PX;
+    border-radius: 2.5PX;
+
+    border: 0.1px dotted #000000;
     background-color: #ffffffc2;
     
     
@@ -93,16 +96,19 @@ h1 {
 .entrar{ 
     width: 100px;
     padding: 7PX;
-    border: none;
+    border: 1px dotted black;
     border-radius: 10PX;
     font-family: 'Roboto', sans-serif;
-    background-color: rgba(255, 255, 255, 0.76);
+    background-color: rgba(255, 255, 255, 0);
+
     animation: background .5s;
   
 }
 
 .entrar:hover {
-    background: #f3f3f3af;
+    background: #000000;
+    color: #ffffff;
+
     box-shadow: 0 4px 10px rgba(17, 17, 17, 0.63);
 }
 
@@ -133,9 +139,10 @@ input[type="checkbox"]{
 
 .login-social {
     margin-top: 20px;
-    border-top-style: solid;
+    border-top-style: dotted;
     border-width: 1px;
-    border-color: #fff;
+    
+    border-color: rgb(0, 0, 0);
     text-align: center;
     padding-top: 10px;
 }
@@ -221,6 +228,7 @@ input[type="checkbox"]{
 }
 
 .google{
+ 
     border: 1px solid #ffffff;
     background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
     -webkit-background-clip: text;
