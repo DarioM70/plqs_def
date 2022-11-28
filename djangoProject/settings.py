@@ -26,8 +26,8 @@ import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '5!cc=xez4vgpg0e%s*x8caqi5k_3uk75zw)r2d)y0u$ii4uh(9')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = False
+# DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = ["*"]
 
@@ -80,7 +80,6 @@ WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

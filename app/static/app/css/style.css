@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -222,11 +223,15 @@ nav {
 
 
 .textos-header {
-    margin: 100px 0 0 30px;
+    margin: 100px 0 10px 30px;
     z-index: 1;
     background-color: #0000009a;
     padding: 30px;
     border-radius: 20px;
+}
+
+.p-header{
+    margin-bottom: 5px;
 }
 
 .contenido-header h1{
@@ -259,6 +264,7 @@ nav {
     border-radius: 5px;
     box-shadow: 0 8px 32px rgba(31, 222, 130, .46);
     transition: background .5s ;
+    position: relative;
     
 }
 
@@ -500,12 +506,20 @@ nav {
     font-size: 20px;
 }
 
+.imagenes-services{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .img-serv{
     width: 350px;
     height: 350px;
     border-radius: 50%;
     margin-left: 10px;
     margin-bottom: 10px;
+    border: #0000007c solid 5px;
+
 }
 
 /* footer */
@@ -581,6 +595,37 @@ footer {
 
 /* Breakpoints responsive */
 
+@media screen and (max-width: 1395px) {
+    .img-serv{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+
+@media  screen and (max-width: 1280px){
+    /* Services */
+
+    .imagenes-services{
+        border-top: #000000 1px solid;
+        padding-top: 10px;
+        margin-top: 10px;
+        transition: ease-out 0.5s;
+    }
+    .services {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .img-serv{
+        width: 250px;
+        height: 250px;
+        margin-top: 40px;
+        
+    }
+}
+
 
 @media screen and (max-width:1130px) {
     .titulo {
@@ -607,6 +652,7 @@ footer {
     .contenido-header>img {
         width: 650px;
     }
+   
 
     .enlaces-header {
         position: fixed;
@@ -666,8 +712,17 @@ footer {
 
     /* Services */
 
+
     .services>img {
         width: 550px;
+    }
+
+    .img-serv{
+        width: 250px;
+    }
+    
+    .box-skills{
+        width: 300px;
     }
 
     .box-skills h4 {
@@ -681,7 +736,19 @@ footer {
     }
 }
 
+@media  screen and (max-width:1027px){
+    .textos-header{
+        margin-top: 200px;
+    }
+    
+}
 
+@media  screen and (max-height:870px){
+    .contenido-header>img{
+        display: none !important;
+
+    }
+}
 
 @media screen and (max-width:950px) {
     .titulo {
@@ -689,22 +756,27 @@ footer {
         
     }
 
+    .header{
+        
+     
+    }
+
     .contenido-header {
         
         flex-direction: column;
         /*justify-content: space-evenly;*/
-        height: 720px;
+        height: 800px;
         
         
     }
 
     .contenido-header>img {
-        width: 600px;
+        width: 350px;
         margin-top: 0px;
     }
 
     .textos-header {
-        margin: 0;
+        margin: 20px;
         
         
     }
@@ -718,7 +790,7 @@ footer {
     /* About us */
 
     .articulo {
-        width: 350px;
+        width: 400px;
     }
 
     /* Questions */
@@ -754,10 +826,7 @@ footer {
 
     /* Services */
 
-    .services {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
+   
 
     .box-skills {
         margin: 0 0 40px 0;
@@ -868,9 +937,14 @@ footer {
     }
 
     /* Services */
+ 
 
     .services>img {
         width: 300px;
+    }
+
+    .box-skills{
+        width: 200px;
     }
 
     .box-skills h4 {
@@ -883,9 +957,23 @@ footer {
         margin-bottom: 40px;
     }
 }
+
+@media screen and (max-width:590px){
+    /* About us */
+
+    .articulo {
+        width: 400px;
+    }
+    
+}
+
 @media screen and (max-width:480px) {
     .titulo {
         font-size: 35px;
+    }
+
+    .articulo{
+        width: 350px;
     }
 
     h1 {
@@ -945,11 +1033,7 @@ footer {
         display: block;
     }
 
-    /* About us */
-
-    .articulo {
-        width: 95%;
-    }
+  
 
     /* Questions */
 
@@ -969,6 +1053,8 @@ footer {
 
     /* Services */
 
+
+
     .services>img {
         width: 300px;
     }
@@ -984,5 +1070,56 @@ footer {
     }
 }
 
+@media screen and (max-width:430px) { 
+    .header{
+        
+        height: 800px;
+    }
 
+    .articulo{
+        width: 350px;
+    }
+
+    .header::after{
+        min-height: 800px;
+    }
+    .textos-header{
+        height: 750px;
+        margin-bottom: 5px;
+        padding: auto;
+    }
+    .p-header>p{
+        font-size: 22px;
+    }
+
+    .contenido-header>img {
+        display: none !important;
+
+    }
+
+    
+}
+
+@media  screen and (max-height:670px) {
+    .header{
+        
+        height: 800px;
+    }
+
+    .header::after{
+        min-height: 800px;
+    }
+    .textos-header{
+        height: 750px;
+        margin-bottom: 5px;
+        padding: auto;
+    }
+    .p-header>p{
+        font-size: 22px;
+    }
+
+    
+}
+ 
+    
 
